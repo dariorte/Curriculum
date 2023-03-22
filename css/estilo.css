@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family:'Metal Mania', cursive;
+    
+  }
+
+  .titulo{
+
+    font-size: 300%;
+    color: rgb(5, 4, 4);
+  }
+
+header{
+    width: 100%;
+  height: 600px;
+  background: linear-gradient(
+      90deg,
+      hsla(0, 11%, 89%, 0.623) 23%,
+      hsla(0, 100%, 50%, 0.603) 100%
+    )
+}
+
+input{
+
+    border-radius: 3px;
+    border: 3px solid rgb(216, 52, 2);
+    background-color: white;
+
+}
+
+.inputcolor{
+
+    background-color: rgba(228, 116, 116, 0.562);
+
+}
+
+#contraseña{
+
+    background-color: rgba(119, 20, 20, 0.534);
+    color: rgb(200, 255, 0);
+}
