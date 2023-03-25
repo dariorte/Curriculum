@@ -21,7 +21,7 @@ header{
   background: linear-gradient(
       90deg,
       hsla(0, 11%, 89%, 0.623) 23%,
-      hsla(0, 100%, 50%, 0.603) 100%
+      hsla(0, 96%, 44%, 0.603) 100%
     )
 }
 
@@ -35,12 +35,12 @@ input{
 
 .inputcolor{
 
-    background-color: rgba(228, 116, 116, 0.562);
+    background-color: rgba(255, 255, 255, 0.562);
 
 }
 
 #contraseña{
 
-    background-color: rgba(119, 20, 20, 0.534);
-    color: rgb(200, 255, 0);
+    background-color: rgba(231, 153, 153, 0.534);
+    color: rgb(18, 1, 255);
 }
