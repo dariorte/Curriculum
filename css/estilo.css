@@ -1,46 +1,133 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family:'Metal Mania', cursive;
-    
-  }
+body{
 
-  .titulo{
+  font-family:'Roboto',sans-serif;
+}
 
-    font-size: 300%;
-    color: rgb(5, 4, 4);
-  }
+h1{
 
-header{
-    width: 100%;
+  font-size: 50px;
+}
+
+.contenedor{
+
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+  overflow: hidden;
+}
+
+header::before{
+
+  content: "";
+  display: block;
+  margin-bottom: 80px;
+}
+
+nav{
+
+  width: 100%;
+  height: 80px;
+  background-color: rgb(242, 246, 250);
+  border-bottom: 1px solid transparent;
+  box-shadow: 1px 1px 10px 0 rgb(0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+}
+
+.nav{
+  display:flex;
+  height: 80px;
+  width: 100%;
+  align-items: center;
+
+}
+
+.enlaces-header{
+font-weight: 300;
+margin: auto;
+
+}
+
+.nav .enlaces-header a{
+  color: #5d665d;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.nav .enlaces-header a:hover{
+
+  color: aliceblue;
+  background-color: red;
+  border-color: red;
+  transition: all ease-in-out .2s;
+}
+
+.titulospro{
+  text-align: left;
+  margin: 20px 0;
+
+}
+
+.contenido-header{
+
+  width: 80%;
   height: 600px;
-  background: linear-gradient(
-      90deg,
-      hsla(0, 11%, 89%, 0.623) 23%,
-      hsla(0, 96%, 44%, 0.603) 100%
-    )
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0 auto;
 }
 
-input{
+.contenido-header>img{
 
-    border-radius: 3px;
-    border: 3px solid rgb(216, 52, 2);
-    background-color: white;
-
-}
-
-.inputcolor{
-
-    background-color: rgba(255, 255, 255, 0.562);
+  width: 300px;
+  height: 300px;
+  margin-left: 50px;
+  animation: ease-in animacion .3s;
 
 }
 
-#contraseña{
+.textos-header{
 
-    background-color: rgba(231, 153, 153, 0.534);
-    color: rgb(18, 1, 255);
+  margin: 0 0 30px;
+}
+
+.contenido-header p{
+  font-weight: 300;
+  margin-top: 14px;
+  color: black;
+  text-align: justify;
+}
+
+@keyframes animacion {
+  0%{transform: scale(0);}
+  100%{transform: scale(1);}
+}
+
+.contenido-header a {
+
+  margin: 28px 0 0 0;
+  width: 150px;
+  display: inline-block;
+  background-color: red;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 12px 0;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  box-shadow: 0 8px 32px rgb(231, 31, 31);
+
 }
