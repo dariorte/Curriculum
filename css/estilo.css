@@ -222,11 +222,20 @@ footer{
 .content-education{
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
-  margin: 40px 0; /*arriba y abajo en 40 y derecha e izquierda en 0 */
-  justify-content: space-around;
-  background-color: dimgray;
+  padding-bottom: 30px;
+  /*margin: 40px 0; arriba y abajo en 40 y derecha e izquierda en 0 */
+  justify-content: space-evenly;
+  background-color: gray;
 }
+
+.section-education .title{
+  width: 100%;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  margin: 15px 0;
+} 
+
 .title{
   width: 100%;
   text-align: center;
@@ -269,10 +278,17 @@ footer{
 }
 
 /* ##### CERTIFICADOS ##### */
+
+.certificados .title{
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
 .content-certificados{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 40px;
 }
 .certificado{
@@ -302,4 +318,60 @@ footer{
   color: white;
   transition: all ease-in-out .5s;
 
+}
+
+.hamburguer{
+  width: 80px;
+  height: 80px;
+  text-align: center; /*porqueesunvector*/
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  z-index: 100;
+  display: none;
+}
+.hamburguer > i{
+  font-size: 25px;
+   line-height: 80px; /*es una estrategia para alinear de manera vertical  */
+
+}
+
+.section-education{
+  background-color: white;
+
+}
+
+/* ##### BREAKPOINTS ##### */
+@media screen and (max-width:700px) {
+  .hamburguer{
+      display: block;
+  }
+  .enlaces-header{
+       position: fixed; /* se pone fijo */
+       background-color: #d03d3d;
+       top: 0;
+       right: 0;
+       width: 100%;
+       height: 100vh;
+       display: flex; 
+       flex-direction: column;
+       text-align: center;
+       align-items: center;
+       clip-path: circle(0.0% at 0 0);
+  }
+  
+  .nav .hamburgueropen{
+      clip-path: circle(150% at 0 0);
+  }
+   .nav .enlaces-header a{ /*le damos las propiedades a cada etiqueta */
+      color: white;
+      text-transform: uppercase;
+      font-weight: 800;
+      margin-top: 20px;
+      width: 50%;
+      background-color: #cf6c6c;
+  }
+  .nav .enlaces-header a:hover{
+      color: #d03d3d;
+      background-color: white;
+  }
 }

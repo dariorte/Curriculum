@@ -21,12 +21,15 @@
         <nav>
             <section class="contenedor nav">
                 <div class="enlaces-header">
-                    <a href="#">Inicio</a>
-                    <a href="#">Inicio</a>
-                    <a href="#">Inicio</a>
-                    <a href="#">Inicio</a>
-                    <a href="#">Inicio</a>
-                    <a href="#">Inicio</a>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#education">Educación</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#certificates">Certificados</a>
+                    <a href="#footer">Contacto</a>
+                    
+                </div>
+                <div class=hamburger">
+                   <i class="fa-solid fa-bars"></i>
                 </div>
             </section>
         </nav>
@@ -37,53 +40,58 @@
                     <div class="titulospro">
                         <h3><i class="fa-sharp fa-solid fa-check"></i> Ingeniería de Sistemas(e)</h3>
                         <h3><i class="fa-sharp fa-solid fa-check"></i> Bachiller Tecnico Ambiental</h3>
-                        <h3><i class="fa-sharp fa-solid fa-check"></i> xxxxxxxxxxxxx</h3>
-                        <h3> <i class="fa-sharp fa-solid fa-check"></i> xxxxxxxxxxxxx</h3>
+                        <h3><i class="fa-sharp fa-solid fa-check"></i> Universidad Francisco de Paula Santander</h3>
                     </div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+                    <p>Soy una Ingenieria de sistemas con conocimientos
+                        en Java , GitHub, HTMl, css , JavaScript.
+                        Trabajo en equipo, liderazgo y orgaanización.
+                    </p><br>
                     <a href="docs/Dariana Ortega - Perfil.pdf" target="_blank">Ver Perfil</a>
                 </section>
-                <img src="img/Foto Dariana.jpeg" alt="Foto De Mi " >
+                <img src="img/Foto Dariana.jpeg" alt="Foto De Mi " width="300px" height="300px">
             </section>
         </div>
     </header>
-
-    <script src="https://kit.fontawesome.com/223493b281.js" crossorigin="anonymous"></script>
 <!-- 
     #################################TITULOS################################## -->
-    <section class="content-education">
-        <!-- <div class="contenedor ">  -->
+    <section id="education"  class="content-education">
+         <div class="contenedor"> 
             <div class="title">
                 <h2>Educación</h2>
             </div>
-                <div class="education">
-                    <i class="fa-solid fa-school"></i>
-                    <h3>Ingeniero de Sistemas (E)</h3>
-                    <p>Quinto semestre</p>
-                    <p>Universidad Francisto de Paula Santander Ocaña</p>
-                    <a href="docs/Dariana Ortega - Perfil.pdf" target="_blank">Ver documento</a>
-             </div>
+                <div class="content-education">
+                    <div class="education">
+                        <i class="fa-solid fa-school"></i>
+                        <h3>Ingeniero de Sistemas (E)</h3>
+                        <p>Quinto semestre</p>
+                        <p>Universidad Francisto de Paula Santander Ocaña</p>
+                        <a href="docs/Dariana Ortega - Perfil.pdf" target="_blank">Ver documento</a>
+                 </div>
+                </div>
+               
         
 
         <div class="education">
         <i class="fa-solid fa-school"></i>
                     <h3>Basico Secundaria</h3>
-                    <p>Quinto semestre</p>
-                    <p>Colegio Monseñor Pacheco</p>
+                    <p>2020</p>
+                    <p>Colegio Monseñor Diaz Plata</p>
                     <a href="#" target="_blank">Ver documento</a>
                 </div>
-        <div class="education">
-        <i class="fa-solid fa-school"></i>
+        
+                <div class="education">
+                    <i class="fa-solid fa-school"></i>
                     <h3>Ingeniero de Sistemas (E)</h3>
                     <p>Quinto semestre</p>
                     <p>Universidad Francisto de Paula Santander Ocaña</p>
                     <a href="#" target="_blank">Ver documento</a>
                 </div>
     </div>
-    
-        
-    </section>
-    <section class="certificados">
+</section>
+
+        <!-- ################CERTIFICADOS################# -->
+    <section id="certificates" class="section-education">
+        <section class="certificados">
         <div class="contenedor">
             <div class="title">
                 <h2>Certificados</h2>
@@ -95,10 +103,10 @@
                     <h4>UFPSO - 2023</h4>
                     <a href="docs/certificado.png" target="_blank">Ver</a>
                 </div>
-
             </div>
         </div>
     </section>
+    
     <section class="certificados">
         <div class="contenedor">
             <div class="title">
@@ -152,7 +160,7 @@
     
 
    <!-- PIE DE PAGINA -->
-    <footer>
+    <footer id="footer">
         <div class="partFooter">
             <img src="img/Foto Dariana.jpeg" alt="Mi foto de perfil.">
         </div>
@@ -175,7 +183,7 @@
         <h4>Enlaces</h4>
         <a href="https://github.com/dariorte" target="_blank">Repositorio de Git</a>
         <a href="https://www.linkedin.com/in/dariana-ortega-018035175/" target="_blank">Linkedin</a>
-        <a href="XXXXXXXXXXX" target="_blank">Canal De YouTube</a>
+       
     </div>
         <div class="partFooter">
             <h4>Redes Sociales</h4>
@@ -188,5 +196,8 @@
         </div>
     </footer>
 
+    <!-- #####################SCRIPT#################### -->
+    <script src="./js/myjs.js"></script>
+    <script src="https://kit.fontawesome.com/223493b281.js" crossorigin="anonymous"></script>
 </body>
 </html>
