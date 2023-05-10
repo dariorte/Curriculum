@@ -1,137 +1,247 @@
-*{
+*{ /* sirve para eliminar la pequeña linea de la pagina  */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* esta propiedad me ayuda a que las medidas se sumen de manera completa */
 }
-
 body{
-
-  font-family:'Roboto',sans-serif;
+  font-family: 'Roboto', sans-serif; /* este muestra el tipo de familia, que es el que usa google */
 }
-
 h1{
-
-  font-size: 50px;
+  font-size: 50px; /* tamaño de la letra */
 }
-
 .contenedor{
-
-  width: 90%;
-  max-width: 1400px;
-  margin: auto;
-  overflow: hidden;
+  width: 90%;  /*  */
+  max-width: 1400px; /*  */
+  margin: auto; /*  */
+  overflow: hidden; /* esta propiedad me ayuda a que si la imagen es muy grande, rompe la imagen para evitar la barra de desplazamiento horizontal */
 }
-
 header::before{
-
   content: "";
   display: block;
-  margin-bottom: 80px;
+  margin: 80px;
 }
-
 nav{
-
-  width: 100%;
-  height: 80px;
-  background-color: rgb(242, 246, 250);
-  border-bottom: 1px solid transparent;
-  box-shadow: 1px 1px 10px 0 rgb(0, 0, 0.2);
-  position: fixed;
-  top: 0;
-  z-index: 100;
-
-}
-
+  width: 100%; /* esta propiedad me ayuda a que tome el 100% de la pagina */
+  height: 80px; /* esta propiedad me ayuda a que tome el 100% de la pagina */
+  background-color: #fff; 
+  border-bottom: 1px solid transparent; /* esta propiedad me ayuda a que el borde del boton sea de un pixel, sea solido y transparente */
+  box-shadow: 1px 1px 10px 0 rgba(0,0,0,.2); /* esta propiedad me ayuda a que  */
+  position: fixed; /* esta propiedad me ayuda a que sea fija la posicion y no cambie */
+  top: 0%; /* esta propiedad me ayuda a que la distancia hacia arriba sea 0 */
+  z-index: 100; /* esta propiedad me ayuda a que el elemento suba */
+} 
 .nav{
-  display:flex;
+  display: flex; /* esta propiedad me ayuda a que las cosas se pongan de lado a lado */
   height: 80px;
-  width: 100%;
+  width: 100%; 
   align-items: center;
-
 }
-
 .enlaces-header{
-font-weight: 300;
-margin: auto;
+  font-weight: 300;
+  /*estapropiedadmeayudaaquetomemasgrosoreltexto*/margin: auto;
+  /*estapropiedadmeayudaaquetomesecentre*/
+  transition:all ease-in-out 0.6s ;
+  
 
 }
-
 .nav .enlaces-header a{
-  color: #5d665d;
+  color: black;
   text-decoration: none;
   margin-left: 20px;
   padding: 12px;
   border-radius: 10px;
+  animation: jello- horizontal .9s both;
+  -webkit-animation: jello- horizontal 0.9s both;
 }
-
 .nav .enlaces-header a:hover{
-
-  color: aliceblue;
-  background-color: red;
-  border-color: red;
-  transition: all ease-in-out .2s;
+  color: #fff;
+  background-color: #d03d3d;
+  border-color: #d03d3d;
+  transition: all ease in-out .5s;
+  animation: squeeze3124 0.9s both;
+  -webkit-animation: squeeze3124 0.9s both;
 }
-
+.hamburguer{
+  width: 80px;
+  height: 80px;
+  text-align: center; /*porqueesunvector*/
+  cursor: pointer;
+  transition: all 0.5s ease-in;
+  z-index: 100;
+  display: none;
+}
+.hamburguer > i{
+  font-size: 25px;
+   line-height: 80px; /*es una estrategia para alinear de manera vertical  */
+   
+}
 .titulospro{
-  text-align: left;
-  margin: 20px 0;
-
+  text-align: left; 
+  margin: 20px 0; /* esta propiedad me ayuda a que tome 20 arriba y 0 abajo */
 }
-
 .contenido-header{
-
   width: 80%;
   height: 600px;
-  display: flex;
+  display: flex; /* esta propiedad me ayuda a que tome un display flexible */
   justify-content: space-between;
+  align-items: center;
   text-align: center;
   margin: 0 auto;
 }
-
-.contenido-header>img{
-
-  width: 300px;
-  height: 300px;
-  margin-left: 50px;
-  animation: ease-in animacion .3s;
-
+.contenido-header > img{
+  width: 350px;
+  height: 350px;
+  margin-left: 70px;
+  margin-bottom: 80px;
+  animation: ease-in animacion 0.5s;
+  -webkit-animation: ease-in animacion 0.5s;
 }
-
-.textos-header{
-
-  margin: 0 0 30px;
-}
-
-.contenido-header p{
+.contenido-header P{
   font-weight: 300;
   margin-top: 14px;
   color: black;
   text-align: justify;
 }
-
-@keyframes animacion {
-  0%{transform: scale(0);}
-  100%{transform: scale(1);}
+.textos-header{
+  margin: 0 0 0 30px;
 }
-
-.contenido-header a {
-
+@keyframes animacion{
+  0% { transform:scale(0) ;  }
+  100% { transform:scale(1) ; }
+}
+.contenido-header a{
   margin: 28px 0 0 0;
   width: 150px;
   display: inline-block;
-  background-color: red;
+  background-color: #d03d3d;
   text-align: center;
-  color: aliceblue;
+  color: #fff;
   text-decoration: none;
   padding: 12px 0;
   border-radius: 5px;
-  font-size: 16px;
   font-weight: 400;
-  text-transform: uppercase;
-  box-shadow: 0 8px 32px rgb(231, 31, 31);
+  font-size: 16px;
+  transition: squeeze3124 0.9s both;
+  text-transform: uppercase;/*estapropiedad(uppercase)meayudaaquetomesevuelvamayuscula*/
+  box-shadow: 0 8px 32px rgba(97, 31, 31, 046);
+}
+.content-educacion {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  justify-content: space-around;
+}
+div {
+  display: block;
+}
+/* div.content-educacion{
+  justify-content: space-evenly;
+} */
+
+/* ##### EDUCATION ##### */
+.section-education{
+  background-color: white;
 
 }
 
+.content-education{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  /* margin: 40px 0; arriba y abajo en 40 y derecha e izquierda en 0 */
+  justify-content: space-evenly;
+  background-color: gray;
+
+}
+.section-education .title{
+  width: 100%;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  margin: 15px 0;
+}   
+.title{
+  width: 100%;
+  text-align: center;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.education{
+  width: 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+}
+.education:hover{
+  box-shadow: 0px 0px 20px gray; /*#####20pixelesdeanchoycolorgris#####*/
+  transition: all ease-in-out .5s;
+  color: #d03d3d;
+}
+.education a{
+  text-decoration: none;
+  font-size: 12px;
+  color: black;
+}
+.education a:hover{
+  color: black ;
+}
+.education i{
+  color: #d03d3d;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  text-align: center;
+  align-items: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* ##### CERTIFICADOS ##### */
+.certificados .title{
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+.content-certificados{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+.certificado{
+  background: #d2d2d2;
+  border: 1px solid #d2d2d2;
+  border-radius: 5px;
+  width: 22%;
+  padding: 15px;
+  margin: 10px 10px;
+  text-align: center;
+}
+.certificado img{
+  height: 100px;
+  width: auto;
+  border-radius: 5px;
+}
+.certificado a{
+  color: gray;
+  font-size: 12px;
+  text-decoration: none;
+}
+.certificado a:hover{
+  color: #d03d3d;
+}
+.certificado:hover{
+  background-color: #d03d3d;
+  color: white;
+  transition: all ease-in-out .5s;
+
+}
 /* ##### FOOTER ##### */
 footer{
   background: rgb(70, 70, 70);
@@ -148,6 +258,8 @@ footer{
 }
 .partFooter img{
   width: 60%;
+  margin-bottom: 20%;
+  
 }
 .partFooter h4{
   color: white;
@@ -216,162 +328,97 @@ footer{
   border-color: #d03d3d;
 }
 
-/* ##########################TITULOS########################## */
+/* ##### BREAKPOINTS ##### */
+/* barra de menu hamburguesa */
 
-/* ##### EDUCATION ##### */
-.content-education{
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 30px;
-  /*margin: 40px 0; arriba y abajo en 40 y derecha e izquierda en 0 */
-  justify-content: space-evenly;
-  background-color: gray;
+@media screen and (max-width:900px) {
+  .contenido-header > img{
+      width: 150px;
+      height: 150px;
+      animation:  ease-in animacion 0.5s;
 }
-
-.section-education .title{
-  width: 100%;
-  text-align: center;
-  display: block;
-  text-transform: uppercase;
-  margin: 15px 0;
-} 
-
-.title{
-  width: 100%;
-  text-align: center;
-  display: block;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-.education{
-  width: 30%;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 30px;
-}
-.education:hover{
-  box-shadow: 0px 0px 20px gray;
-  transition: all ease-in-out .5s;
-
-}
-.education a{
-  text-decoration: none;
-  font-size: 12px;
-  color: gray;
-}
-.education a:hover{
-  color: #d03d3d;
-}
-.education i{
-  color: #d03d3d;
+h1{
   font-size: 30px;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  line-height: 40px;
-  text-align: center;
-  align-items: center;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
-
-/* ##### CERTIFICADOS ##### */
-
-.certificados .title{
-  display: block;
+.contenido-header{
   width: 100%;
-  text-align: center;
-  text-transform: uppercase;
-}
-.content-certificados{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 40px;
+  height: 400px;
+
 }
 .certificado{
-  background: #d2d2d2;
-  border: 1px solid #d2d2d2;
-  border-radius: 5px;
-  width: 22%;
-  padding: 15px;
-  margin: 10px 10px;
-  text-align: center;
+  width: 45%;
+}
+/* footer */
+.partFooter{
+  width: 80%;
+}
+.partFooter img{
+  display: none; /* para ocultar la imagen */
+}
+footer{
+ padding: 0px;
+}
+}
+@media screen and (max-width:700px) {
+.hamburguer{
+  display: block;
+}
+.enlaces-header{
+   position: fixed; /* se pone fijo */
+   background-color: #d03d3d;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100vh;
+   display: flex; 
+   flex-direction: column;
+   text-align: center;
+   align-items: center;
+   clip-path: circle(0.0% at 0 0);
+}
+
+.nav .hamburgueropen{
+  clip-path: circle(150% at 0 0);
+}
+.nav .enlaces-header a{ /*le damos las propiedades a cada etiqueta */
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 20px;
+  width: 50%;
+  background-color: #cf6c6c;
+}
+.nav .enlaces-header a:hover{
+  color: #d03d3d;
+  background-color: white;
+}
+/* La visual principal*/
+h1{
+  font-size: 35px; /*  tamaño de titulo  */
+
+}
+.contenido-header{
+  width: 100%;
+  height: 530px;
+  display: block;
+}
+.contenido-header > img{
+  width: 120px;
+  height: 120px;
+  animation:  ease-in animacion 0.5s;
+  margin-top: 20px;
+  -webkit-animation:  ease-in animacion 0.5s;
+}
+.contenido-header > img, .textos-header{
+  margin-left: 0px;
+} 
+
+/* Section education */
+.education, .certificado, .partFooter {
+  width: 80%;
+  margin-bottom: 80px;
 }
 .certificado img{
-  height: 100px;
-  width: auto;
-  border-radius: 5px;
+  height: 130px;
 }
-.certificado a{
-  color: gray;
-  font-size: 12px;
-  text-decoration: none;
-}
-.certificado a:hover{
-  color: #d03d3d;
-}
-.certificado:hover{
-  background-color: #d03d3d;
-  color: white;
-  transition: all ease-in-out .5s;
-
-}
-
-.hamburguer{
-  width: 80px;
-  height: 80px;
-  text-align: center; /*porqueesunvector*/
-  cursor: pointer;
-  transition: all 0.5s ease-in;
-  z-index: 100;
-  display: none;
-}
-.hamburguer > i{
-  font-size: 25px;
-   line-height: 80px; /*es una estrategia para alinear de manera vertical  */
-
-}
-
-.section-education{
-  background-color: white;
-
-}
-
-/* ##### BREAKPOINTS ##### */
-@media screen and (max-width:700px) {
-  .hamburguer{
-      display: block;
-  }
-  .enlaces-header{
-       position: fixed; /* se pone fijo */
-       background-color: #d03d3d;
-       top: 0;
-       right: 0;
-       width: 100%;
-       height: 100vh;
-       display: flex; 
-       flex-direction: column;
-       text-align: center;
-       align-items: center;
-       clip-path: circle(0.0% at 0 0);
-  }
-  
-  .nav .hamburgueropen{
-      clip-path: circle(150% at 0 0);
-  }
-   .nav .enlaces-header a{ /*le damos las propiedades a cada etiqueta */
-      color: white;
-      text-transform: uppercase;
-      font-weight: 800;
-      margin-top: 20px;
-      width: 50%;
-      background-color: #cf6c6c;
-  }
-  .nav .enlaces-header a:hover{
-      color: #d03d3d;
-      background-color: white;
-  }
 }
